@@ -42,7 +42,8 @@ app.use((req, res, next)=>{
 
 require('./api/salaryController')(app);
 
-app.listen('4000', (err)=> {
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, (err)=> {
      console.log("Connted to db port 4000");
      if(err){
         console.log(err);
