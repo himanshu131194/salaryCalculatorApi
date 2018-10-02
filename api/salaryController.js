@@ -1,6 +1,12 @@
 const Salary = require('../models/salary');
 module.exports = api => {
 
+api.get('/', (req, res)=>{
+    res.send({
+        Hi : "api is running properly"
+    })
+})
+
 api.get('/salary', async (req, res) => {
   const salary = Salary.find();
   let queryParams = req.query || null;
