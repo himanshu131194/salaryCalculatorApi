@@ -19,8 +19,7 @@ const SalarySchema = new Schema({
    company_id: Number,
    company_name: {
       type: String,
-      lowercase: true,
-      unique: true
+      lowercase: true
    },
    priority_id: Number,
    display_order: Number,

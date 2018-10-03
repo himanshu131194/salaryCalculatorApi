@@ -44,7 +44,8 @@ api.post('/salary', async (req, res)=>{
     try {
       const { city_name, designation_name, work_experience} = req.body;
       const salary =  new Salary(req.body);
-            await salary.save(()=>{
+            await salary.save((result)=>{
+              console.log(result);
               res.json({
                  status: 200,
                  data: salary

@@ -4,7 +4,7 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const MongoStore = require('connect-mongo')(session);
 const app = express();
-const db = mongoose.connect( 'mongodb://salary:salary123@ds119663.mlab.com:19663/salary', { useNewUrlParser: true })
+const db = mongoose.connect( 'mongodb://salary:salary123@ds121413.mlab.com:21413/salary', { useNewUrlParser: true })
                    .then(conn => conn).catch(console.error);
 
 app.use(bodyParser.urlencoded({ extended: false }))
